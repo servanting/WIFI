@@ -20,7 +20,7 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 SA.Name = "SA"
 SA.Parent = ScreenGui
-SA.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+SA.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SA.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SA.BorderSizePixel = 0
 SA.Position = UDim2.new(0.390139997, 0, 0.307328612, 0)
@@ -30,8 +30,8 @@ UICorner.Parent = SA
 
 SAText.Name = "SA Text"
 SAText.Parent = SA
-SAText.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-SAText.BorderColor3 = Color3.fromRGB(170, 0, 0)
+SAText.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+SAText.BorderColor3 = Color3.fromRGB(255, 255, 255)
 SAText.BorderSizePixel = 0
 SAText.Size = UDim2.new(0, 360, 0, 44)
 SAText.Font = Enum.Font.Bangers
@@ -179,19 +179,19 @@ SilentAim.MouseButton1Down:connect(function()
 					if v.Name ~= plr.Name and v.Character then
 						v.Character.RightUpperLeg.CanCollide = false
 						v.Character.RightUpperLeg.Transparency = 10
-						v.Character.RightUpperLeg.Size = Vector3.new(13,13,13)
+						v.Character.RightUpperLeg.Size = Vector3.new(10,10,10)
 
 						v.Character.LeftUpperLeg.CanCollide = false
 						v.Character.LeftUpperLeg.Transparency = 10
-						v.Character.LeftUpperLeg.Size = Vector3.new(13,13,13)
+						v.Character.LeftUpperLeg.Size = Vector3.new(10,10,10)
 
 						v.Character.HeadHB.CanCollide = false
 						v.Character.HeadHB.Transparency = 10
-						v.Character.HeadHB.Size = Vector3.new(12,12,12)
+						v.Character.HeadHB.Size = Vector3.new(9,9,9)
 
 						v.Character.HumanoidRootPart.CanCollide = false
 						v.Character.HumanoidRootPart.Transparency = 10
-						v.Character.HumanoidRootPart.Size = Vector3.new(13,13,13)
+						v.Character.HumanoidRootPart.Size = Vector3.new(10,10,10)
 
 					end
 				end
