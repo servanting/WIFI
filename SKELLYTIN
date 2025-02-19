@@ -10,6 +10,7 @@ local SAText = Instance.new("TextLabel")
 local SilentAim = Instance.new("TextButton")
 local UICorner_2 = Instance.new("UICorner")
 local MadeBy = Instance.new("TextLabel")
+local PlayerCount = Instance.new("TextLabel")
 local UICorner_3 = Instance.new("UICorner")
 
 --Properties:
@@ -19,7 +20,7 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 SA.Name = "SA"
 SA.Parent = ScreenGui
-SA.BackgroundColor3 = Color3.fromRGB(110, 7, 217)
+SA.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 SA.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SA.BorderSizePixel = 0
 SA.Position = UDim2.new(0.390139997, 0, 0.307328612, 0)
@@ -29,27 +30,26 @@ UICorner.Parent = SA
 
 SAText.Name = "SA Text"
 SAText.Parent = SA
-SAText.BackgroundColor3 = Color3.fromRGB(128, 108, 225)
+SAText.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
 SAText.BorderColor3 = Color3.fromRGB(170, 0, 0)
 SAText.BorderSizePixel = 0
 SAText.Size = UDim2.new(0, 360, 0, 44)
 SAText.Font = Enum.Font.Bangers
-SAText.Text = " Skelly"
+SAText.Text = " skelly"
 SAText.TextColor3 = Color3.fromRGB(170, 0, 0)
 SAText.TextSize = 35.000
 
 SilentAim.Name = "Silent Aim"
 SilentAim.Parent = SA
-SilentAim.BackgroundColor3 = Color3.fromRGB(148, 148, 148)
-SilentAim.BackgroundTransparency = 1.000
+SilentAim.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 SilentAim.BorderColor3 = Color3.fromRGB(0, 0, 0)
 SilentAim.BorderSizePixel = 0
 SilentAim.Position = UDim2.new(0.222222224, 0, 0.205521479, 0)
 SilentAim.Size = UDim2.new(0, 213, 0, 79)
-SilentAim.Font = Enum.Font.JosefinSans
+SilentAim.Font = Enum.Font.Bangers
 SilentAim.Text = "Enable Silent Aim"
-SilentAim.TextColor3 = Color3.fromRGB(255, 255, 255)
-SilentAim.TextSize = 20.000
+SilentAim.TextColor3 = Color3.fromRGB(170, 0, 0)
+SilentAim.TextSize = 30.000
 SilentAim.TextStrokeTransparency = 0.000
 
 UICorner_2.Parent = SilentAim
@@ -66,6 +66,20 @@ MadeBy.Font = Enum.Font.Bangers
 MadeBy.Text = "B To Toggle On/Off"
 MadeBy.TextColor3 = Color3.fromRGB(170, 0, 0)
 MadeBy.TextSize = 30.000
+
+PlayerCount.Name = "Player Count"
+PlayerCount.Parent = SA
+PlayerCount.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+PlayerCount.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerCount.BorderSizePixel = 0
+PlayerCount.Position = UDim2.new(0.222222224, 0, 0.604294479, 0)
+PlayerCount.Size = UDim2.new(0, 213, 0, 79)
+PlayerCount.Font = Enum.Font.Bangers
+PlayerCount.Text = "Player Count:"
+PlayerCount.TextColor3 = Color3.fromRGB(170, 0, 0)
+PlayerCount.TextSize = 27.000
+
+UICorner_3.Parent = PlayerCount
 
 -- Scripts:
 
@@ -135,7 +149,7 @@ local function BNQNGFT_fake_script() -- ScreenGui.Toggle
 	local Player = game:GetService("Players").LocalPlayer
 	local Mouse = Player:GetMouse()
 	local MainFrame = script.Parent.SA
-	local keybind = "\"
+	local keybind = "b"
 	
 	Mouse.KeyDown:Connect(function(key)
 		if key == keybind then
@@ -173,7 +187,7 @@ SilentAim.MouseButton1Down:connect(function()
 
 						v.Character.HeadHB.CanCollide = false
 						v.Character.HeadHB.Transparency = 10
-						v.Character.HeadHB.Size = Vector3.new(11,11,11)
+						v.Character.HeadHB.Size = Vector3.new(12,12,12)
 
 						v.Character.HumanoidRootPart.CanCollide = false
 						v.Character.HumanoidRootPart.Transparency = 10
